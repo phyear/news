@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+.close{
+			    margin-left:30px;
+				display:inline-block;
+				width:60px;
+				height: 30px;
+				line-height: 30px;
+				border-radius: 5px;
+			    font-size: 12px;
+			    color: white;
+			    padding-left:20px;
+			    padding-right:20px;
+			    background: #D43B33;
+			     }
+            .register{	
+            	margin-top:100px;		
+				border-radius: 3px;
+                
+			}
+			.content{
+				width:80%;
+			}
+			 input{
+                border: none;
+             }
+			.l_head{
+				font-size: 40px;
+				color: #D43B33;
+				border-bottom:2px solid #D43B33;
+			  }
+			  .uname{
+			  	background: url(../img/user.png) no-repeat;
+			  	background-size: 20px 20px;
+                background-color: white;
+                background-position: 9px;
+			  }
+			  .pass,.repass{
+			  	background: url(../img/pass.png) no-repeat;
+			  	background-size: 20px 20px;
+                background-color: white;
+                background-position: 9px;
+			  }
+		     .uname,.pass,.repass{
+			  	width: 200px;
+                height: 30px;
+                font-size: 14px;
+                color: #D43B33;
+                border-radius: 5px;
+                margin: 10px 0;            
+                padding-left: 40px;
+                border: 1px solid #D43B33;
+                outline: none;
+			  }
+			  #submit{
+			  	font-family: "agency fb";
+			  	width:100px;
+			  	height: 30px;
+			  	border-radius: 5px;
+			  	font-size: 12px;
+                color: white;
+                background: #D43B33;
+			  }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="Users" type="com.model.Users"/>
+		<typeAlias alias="News" type="com.model.News"/>
+		<typeAlias alias="Cate" type="com.model.Cate"/>
+		<typeAlias alias="Comments" type="com.model.Comments"/>
+		<typeAlias alias="Likes" type="com.model.Likes"/>
+	</typeAliases>
+	<mappers>
+		<mapper resource="com/mapper/UserMapper.xml" />
+		<mapper resource="com/mapper/NewsMapper.xml" />
+		<mapper resource="com/mapper/CommentsMapper.xml" />
+		<mapper resource="com/mapper/LikeMapper.xml" />
+	</mappers>
+</configuration>

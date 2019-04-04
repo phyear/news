@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+#customers
+{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	width:80%;
+	border-collapse:collapse;
+}
+#customers td, #customers th 
+{   width:100px;
+    word-spacing:normal;
+    height:40px;
+	font-size:1em;
+	border:1px solid #D43B33;
+	padding:3px 7px 2px 7px;
+	overflow:hidden;
+	text-align: center;
+}
+#customers th 
+{
+	font-size:1.1em;
+	text-align:center;
+	padding-top:5px;
+	padding-bottom:4px;
+	background-color:#D43B33;
+	color:#ffffff;
+}
+#customers tr.alt td 
+{
+	color:#000000;
+	background-color:#EAF2D3;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/news_list.css"/>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+	    <style type="text/css">
+	    	.show_count{
+	    		width: 300px;
+	    		height: 300px;
+	    		border: 1px solid #d43b33;
+	    		position: fixed;
+	    		top:150px;
+	    		left: 200px;
+	    	}
+	    	.count{
+	    		border-top: 1px solid #d43b33;
+	    		height: 100px;
+	    		line-height: 50px;
+	    	}
+	    </style>
+	
+	</head>
+	<body>
+		
+		   <div class="show_count">
+		   	<h2 align="center" class="color_d43b33 m_t20 p_b40">ZTX</h2>
+		   	<div class="count content font_24 color_d43b33">
+		   		<p align="center">我的收藏</p>
+		   		<p align="center">20</p>
+		   	</div>
+		   </div>
+			<div class="content">				
+				<ul class="news_list">
+				<li class="news_item">            
+		     <div class="news_img">   		   		          
+		          <img src="${imgArray[0]}"/>		        		          		     		         	       	       		        	       
+		     </div>
+		 	 <div class="news_box m_r50">
+		 				<div class="news_context">
+		 					<h3 class="news_title color_color_4b4b4b">${item.title }</h3>
+		 					<p class="color_626262">${item.context }</p>
+		 					 </div>
+		 					 <div class="news_opr">
+		 					   <ul class="fl">
+		 					      <li class="fl m_r50">${item.newsFrom }</li>
+		 					      <li class="fl m_r50"><fmt:formatDate value="${item.createtime}" pattern="yyyy年MM月dd日  HH时" /></li>
+		 					      <li class="clear"></li>
+		 					   </ul>
+		 					   <ul class="fr">
+		 					      <li class="fl m_r50"><a href="addcomment">评论</a></li>
+		 					      <li class="fl m_r50"><a href="addlike" class="addlike" id="${item.nid }">收藏</a></li>
+		 					      <li class="clear"></li>
+		 					   </ul>
+		 					   <div class="clear"></div>
+		 					 </div>
+		 					</div>
+		 					<div class="clear"></div>
+		 			</li>					
+				</ul>			
+			</div>	
+	</body>
+</html>

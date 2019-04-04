@@ -1,0 +1,33 @@
+@charset "utf-8";
+    .news_list{
+       width:85%;
+        }
+	.news_item{
+		height: 100px;
+		border-bottom: 1px solid #A8A8A8;
+		padding-bottom: 10px;
+		margin-top:50px;
+	 }
+	 .news_img{
+	   float:left;
+	 }
+	 .news_img img{
+	     width:120px;
+	     height:100px;
+	    }
+	  .news_box{
+	    width:80%;
+	    float:right;
+	   } 
+	   .news_context p{
+	     width:600px;
+	     height:40px;  
+	     margin-top:20px;      
+         white-space:nowrap;
+	     text-overflow:ellipsis;
+	     overflow:hidden;
+	   }
+	   .news_opr{
+	    
+	    }
+	 

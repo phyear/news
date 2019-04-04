@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.LikeMapper">
+<resultMap type="Likes" id="MyLike">
+  <id column="lid" property="lid"/>
+  <result column="like_user_id" property="users.uid"/>
+  <result column="like_date" property="like_date"/>
+  <association property="news"  resultMap="myNews" ></association>
+</resultMap>
+<resultMap type="com.model.News" id="myNews">
+             <id property="nid" column="nid"/>
+             <result property="title" column="title"/>
+             <result property="context" column="context" typeHandler="com.tools.MyBlobTypeHandler"/>
+             <result property="imgUrl" column="imgUrl"/>
+             <result property="newsFrom" column="newsFrom"/>
+             <result property="createtime" column="createtime"/>
+</resultMap>
+	<select id="findByNid_Uid" resultMap="MyLike">
+		SELECT * FROM  news n, likes l WHERE l.like_news_id=n.nid AND l.like_news_id=#{nid} And l.like_user_id=#{uid};
+	</select>
+	<insert id="add" useGeneratedKeys="true" parameterType="com.model.Likes">
+	   insert into likes(like_user_id,like_news_id,like_date)values(#{users.uid},#{news.nid},#{like_date})
+	</insert>	
+	<delete id="delete">
+        delete from likes where lid=#{lid}
+    </delete>   
+    <select id="findByUid" resultMap="MyLike">
+		SELECT * FROM  news n, likes l WHERE l.like_news_id=n.nid AND l.like_user_id=#{uid};
+	</select>
+</mapper>

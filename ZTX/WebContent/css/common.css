@@ -1,0 +1,184 @@
+@charset "utf-8";
+*{
+	margin: 0px;
+	padding: 0px;
+}
+img{
+	margin: 0px;
+	padding: 0px;
+}
+li{
+	list-style: none;
+}
+
+a{   
+	color: #666666;
+	text-decoration: none;
+}
+/**
+ * 默认字体，大小
+ */
+body,html{
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+/**
+ * color
+ */
+.red{
+	color:red;
+}
+.color_ddd{
+	color: #ddd;
+}
+.color_666{
+	color: #666;
+}
+.color_d43b33{
+	color: #d43b33;
+}
+.color_white{
+	color: white;
+}
+.color_626262{
+	color: #626262;
+}
+.color_e7e7e7{
+	color: #e7e7e7;
+}
+.color_f2f2f2{
+	color:#f2f2f2;
+}
+.color_4b4b4b{
+	color: #4b4b4b;
+}
+/*浮动*/
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clear{
+	             content: "";  
+			 	display: block;
+			 	clear: both;
+}
+/*容器
+ * */
+.content{
+	width: 80%;
+	margin:0px auto;
+} 
+.mc_tb10{
+	margin: 10px auto;
+}
+/*外边距*/
+.m_r50{
+	margin-right:50px;
+}
+.m_r10{
+	margin-right:10px;
+}
+.m_r100{
+	margin-right:100px;
+}
+.m_t100{
+	margin-top:100px;
+ }
+.m_t50{
+	margin-top:50px;
+}
+.m_t40{
+	margin-top:40px;
+}
+.m_t20{
+	margin-top:20px;
+}
+.m_l40{
+	margin-left: 40px;
+}
+.m_l100{
+	margin-left: 100px;
+}
+.m_b20{
+	margin-bottom: 20px;
+}
+.p_t40{
+    padding-top: 40px;
+}
+.p_b40{
+    padding-bottom: 40px;
+}
+.p_tb40{
+	padding: 40px 0px;
+	}
+/*文字居中*/
+.text-align{
+	text-align: center;
+	}
+/*字体大小*/
+.font_6{
+		font-size: 6px;
+	}
+.font_8{
+		font-size: 8px;
+	}
+.font_12{
+	font-size: 12px;
+}
+.font_10{
+		font-size: 10px;
+	}
+
+.font_14{
+	font-size: 14px;
+}
+.font_16{
+	font-size: 16px;
+}
+.font_18{
+	font-size: 18px;
+}
+.font_20{
+	font-size: 20px;
+}
+.font_22{
+	font-size: 22px;
+}
+.font_24{
+	font-size: 24px;
+}
+.font_26{
+	font-size: 26px;
+}
+.font_28{
+	font-size: 28px;
+}
+.letter_space
+{
+	letter-spacing:5px;
+}
+/**
+ * 行高
+ */
+.l_h30{
+	line-height: 30px;
+}
+.border_bottom{
+	width: 100%;
+	height:60px;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+}
+.abous_box{
+	width: 180px;
+	height: 60px;
+	background: #FFFFFF;
+	position: absolute;
+	top:10px;
+	left: 44%;
+}
+.detail p{
+	margin-bottom: 15px;
+}

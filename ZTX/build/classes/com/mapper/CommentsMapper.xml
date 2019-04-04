@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.CommentsMapper">
+<resultMap type="com.model.Comments" id="MyCom">
+  <id column="cid" property="cid"/>
+  <result column="comment_news_id" property="news.nid"/>
+  <result column="comments_context" property="comments_context"/>
+  <result column="comments_date" property="comments_date"/>
+  <association property="users" column="comment_user_id" javaType="com.model.Users">
+             <id property="uid" column="uid"/>
+             <result property="username" column="username"/>
+        </association>
+</resultMap>
+	<select id="findAllByNid" resultMap="MyCom">
+		SELECT * FROM  users u, comments c WHERE c.comment_user_id=u.uid AND c.`comment_news_id`=#{nid} ORDER  BY  comments_date DESC;
+	</select>
+	<insert id="add" useGeneratedKeys="true" parameterType="News">
+	   insert into comments(comment_user_id,comment_news_id,comments_context,comments_date)values(#{users.uid},#{news.nid},#{comments_context},#{comments_date})
+	</insert>	
+	<delete id="delete">
+        delete from comments where cid=#{cid}
+    </delete>   
+</mapper>

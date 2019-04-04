@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.NewsMapper">
+             <resultMap type="com.model.News" id="myNews">
+             <id property="nid" column="nid"/>
+             <result property="title" column="title"/>
+             <result property="context" column="context" typeHandler="com.tools.MyBlobTypeHandler"/>
+             <result property="imgUrl" column="imgUrl"/>
+             <result property="newsFrom" column="newsFrom"/>
+             <result property="createtime" column="createtime"/>
+               </resultMap>
+	<select id="findNews" resultMap="myNews">
+		SELECT * FROM news  WHERE context IS NOT NULL AND context NOT LIKE ''
+		 <if test='cate != null and cate !=""'>
+		    and cate=#{cate}
+		 </if>
+		ORDER  BY nid DESC
+		<if test='pagesize >= 0'>
+		LIMIT #{pagesize},12
+		</if>
+		;
+	</select>
+	<select id="search" resultMap="myNews">
+	SELECT * FROM news  WHERE context IS NOT NULL AND context NOT LIKE ''
+	<if test='info != null and info !=""'>
+		    and title like '%${info}%'
+		 </if>
+	 ORDER  BY nid DESC
+	 <if test='ps >= 0'>
+		LIMIT #{ps},12
+		</if>
+	</select>
+	<insert id="addNews" useGeneratedKeys="true" parameterType="News">
+	   insert into news(title,context,imgUrl,createtime,newsFrom,cate)values(#{title},#{context},#{imgUrl},#{createtime},#{newsFrom},#{cate})
+	</insert>
+	<select id="findNewsByTitle"  resultMap="myNews">
+		select * from news where title like '${title}%'
+	</select>
+	<select id="findNewsById" resultMap="myNews">
+		select * from news where nid=#{id}
+	</select>
+	<select id="findNewsByCate" resultType="News">
+		select * from news where cate=#{cate}
+	</select>
+	<delete id="deleteNewsById">
+        delete from news where nid=#{id}
+    </delete>  
+    <resultMap id="ByCate" type="com.model.Cate">
+        <id property="cate" column="cate"/>    
+    </resultMap>
+    <select id="findCate"   resultMap="ByCate">
+		select cate as cate from news group by cate
+	</select>  
+</mapper>

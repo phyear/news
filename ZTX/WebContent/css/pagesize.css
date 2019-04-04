@@ -1,0 +1,22 @@
+@charset"utf-8";
+.pagesize li{
+			     	float: left;
+			     	margin-right: 10px;
+			     	margin-bottom:10px;
+			     }
+			     .pagesize li a{
+			        width:50px;
+			     	display: block;			     				   	    
+			     	border:1px solid #A2B5CD;
+			     	text-align: center;
+			     	border-radius: 3px;
+			     	padding:5px 2px;
+			     }
+			     .pagesize li a:hover{
+			     	background: #A2B5CD;
+			     	color: #ffffff;	
+			     }
+			     .active{
+			     	background: #A2B5CD;
+			     	color: #ffffff;		 
+			       }
