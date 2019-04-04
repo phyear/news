@@ -13,15 +13,16 @@
    * #### 简单的爬虫（jsoup）
    
 ## 2.部分界面展示
-* ## 登录界面
-![](https://github.com/phyear/MyCase/blob/master/image/login.png "登录界面")
-* ## 主界面
-![](https://github.com/phyear/MyCase/blob/master/image/main.png "主界面")
-* ## 菜单管理
-![](https://github.com/phyear/MyCase/blob/master/image/menuList.png "菜单管理")
-* ## 用户管理
-![](https://github.com/phyear/MyCase/blob/master/image/roleList.png "用户管理")
-
+* ## 首页
+![](https://github.com/phyear/news/blob/master/projectPicture/2019-04-04_161945.png "首页")
+* ## 文章显示
+![](https://github.com/phyear/news/blob/master/projectPicture/artificate.png "文章显示")
+* ## 我的收藏
+![](https://github.com/phyear/news/blob/master/projectPicture/collect.png "我的收藏")
+* ## 网站后台
+![](https://github.com/phyear/news/blob/master/projectPicture/managePage.png "网站后台")
+* ## 注册页面
+![](https://github.com/phyear/news/blob/master/projectPicture/register.png "注册页面")
 ## 3.快速使用
 
 > * 下载ztx
